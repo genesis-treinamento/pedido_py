@@ -13,7 +13,7 @@ class Pedidos(models.Model):
 
 
 class ItensPedido(models.Model):
-    pedido  = models.ForeignKey(Pedidos,  related_name='itens', on_delete=models.CASCADE)
+    pedido  = models.ForeignKey(Pedidos,  related_name='itens_pedido', on_delete=models.CASCADE)
     produtos = models.IntegerField(blank=False, null=False)
 
     class Meta:
